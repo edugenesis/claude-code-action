@@ -51,7 +51,8 @@ async function run() {
     await checkHumanActor(octokit.rest, context);
 
     // Step 6: Create initial tracking comment
-    const commentData = await createInitialComment(octokit.rest, context);
+    // const commentData = await createInitialComment(octokit.rest, context);
+    const commentData = {id:-1, user: {login: 'claude[bot]', id: 72936333}}
     const commentId = commentData.id;
 
     // Step 7: Fetch GitHub data (once for both branch setup and prompt creation)
