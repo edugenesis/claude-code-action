@@ -73,6 +73,7 @@ export async function prepareMcpConfig(
     };
 
     // Always include comment server for updating Claude comments
+    if(false)
     baseMcpConfig.mcpServers.github_comment = {
       command: "bun",
       args: [
